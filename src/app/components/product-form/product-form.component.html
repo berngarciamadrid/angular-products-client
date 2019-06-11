@@ -1,0 +1,32 @@
+<div class="row mt-2">
+  <div class="col-sm-4 offset-md-4">
+    <form (submit)="edit ? updateProduct() :submitProduct()">
+      <div class="form-group">
+        <input type="text" name="name" id="name"
+        [(ngModel)]="product.name"
+        placeholder="Nombre del Producto"
+        class="form-control"
+        autofocus>
+      </div>
+      <div class="form-group">
+        <input type="text" name="description" id="description"
+        [(ngModel)]="product.description"
+        placeholder="Descripción"
+        class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" name="price" id="price"
+        [(ngModel)]="product.price"
+        placeholder="precio"
+        class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" name="imageUrl" id="imageUrl"
+        [(ngModel)]="product.imageUrl"
+        placeholder="Dirección Imagen"
+        class="form-control">
+      </div>
+      <button class="btn btn-primary btn-block">Guardar Producto</button>
+    </form>
+  </div>
+</div>
